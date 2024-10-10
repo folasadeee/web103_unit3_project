@@ -2,7 +2,7 @@ import '../config/dotenv.js';
 import pg from 'pg';
 
 const config = {
-    connectionString: "postgresql://postgres:xmCVsswZiCuBNiJNFsLgcpFQmnIcubek@autorack.proxy.rlwy.net:12305/railway",
+    connectionString: process.env.DATABASE_URL,
 }
 
 export const pool = new pg.Pool(config)
